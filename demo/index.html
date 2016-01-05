@@ -9,7 +9,7 @@
     <link href="content/css/style.css" rel="stylesheet" />
 </head>
 <body>
-    <div id="address">请选择地区</div>
+    <div id="address">请选择地区</div><br/>
     <input type="text" id="test2" value=" " />
 
     <section id="dist-wrap" class="dist-wrap">
@@ -17,9 +17,9 @@
         <ul id="source" class="dist-source"></ul>
     </section>
 
-    <section id="dist-wrapxx" class="dist-wrap">
-        <ul id="targetxx" class="dist-target"></ul>
-        <ul id="sourcexx" class="dist-source"></ul>
+    <section id="xx" class="dist-wrap">
+        <ul id="yy" class="dist-target"></ul>
+        <ul id="zz" class="dist-source"></ul>
     </section>
 
 
@@ -30,23 +30,21 @@
 
     <script>
         $(function () {
-            $("#address").hydist({
-                province: "浙江省",
-                city: "杭州市",
-                district: "西湖区"
-            });
+            $("#address").hydist();
 
             $("#test2").hydist({
-                wrap: "#dist-wrapxx",
-                target: "#targetxx",
-                source: "#sourcexx",
-                display: "block",
-                province: "浙江省",
-                city: "杭州市",
-                district: "西湖区"
+                wrap: "#xx",
+                target: "#yy",
+                source: "#zz",
+                province: "湖南省",
+                city: "衡阳市",
+                district: "衡南县"
             });
         });
     </script>
+
+
+
     <script>
         (function () {
             function setHtmlFontSize() {

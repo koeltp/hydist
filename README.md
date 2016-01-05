@@ -24,6 +24,21 @@
 </section>
 ```
 第四步：神功大成   
+Method one   
+```js
+ $("#address").hydist();
+ ```   
+ Method two
+ ```js
+ $("#test2").hydist({
+    wrap: "#xx",
+    target: "#yy",
+    source: "#zz",
+    province: "湖南省",
+    city: "衡阳市",
+    district: "衡南县"
+});
+ ``` 
 
 # Options  
 ## display  
