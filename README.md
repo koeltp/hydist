@@ -5,7 +5,7 @@
 地址：http://demo.hengyi.mobi/index.html
 
 # Quick start  
-第一步：引入样式文件
+第一步：引入样式文件  
 	`<link href="content/css/style.css" rel="stylesheet" />`  
 第二步：引入scripts  
 	`<script src="content/lib/jquery-1.10.2.js"></script>  
