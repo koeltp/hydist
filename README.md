@@ -10,7 +10,7 @@
 <link href="content/css/style.css" rel="stylesheet" />
 ```
 第二步：引入scripts  
-```javascripts
+```html
 <script src="content/lib/jquery-1.10.2.js"></script>  
 <script src="content/js/hydist.data.js"></script>  
 <script src="content/js/hydist.js"></script>
