@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地区三级联动Demo - 横溢科技</title>
+    <link href="content/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="address">请选择地区</div>
+    <input type="text" id="test2" value=" " />
+
+    <section id="dist-wrap" class="dist-wrap">
+        <ul id="target" class="dist-target"></ul>
+        <ul id="source" class="dist-source"></ul>
+    </section>
+
+    <section id="dist-wrapxx" class="dist-wrap">
+        <ul id="targetxx" class="dist-target"></ul>
+        <ul id="sourcexx" class="dist-source"></ul>
+    </section>
+
+
+
+    <script src="content/lib/jquery-1.10.2.js"></script>
+    <script src="content/js/hydist.data.js"></script>
+    <script src="content/js/hydist.js"></script>
+
+    <script>
+        $(function () {
+            $("#address").hydist({
+                province: "浙江省",
+                city: "杭州市",
+                district: "西湖区"
+            });
+
+            $("#test2").hydist({
+                wrap: "#dist-wrapxx",
+                target: "#targetxx",
+                source: "#sourcexx",
+                display: "block",
+                province: "浙江省",
+                city: "杭州市",
+                district: "西湖区"
+            });
+        });
+    </script>
+    <script>
+        (function () {
+            function setHtmlFontSize() {
+                var clientWidth = document.documentElement.clientWidth;
+                if (clientWidth >= 768) {
+                    clientWidth = 400;
+                }
+                document.documentElement.style.fontSize = clientWidth / 16 + "px"
+            }
+            var handle = null;
+            window.addEventListener("resize", function () {
+                clearTimeout(handle);
+                handle = setTimeout(setHtmlFontSize, 300);
+            }, false);
+            setHtmlFontSize();
+        })(window);
+    </script>
+</body>
+</html>
