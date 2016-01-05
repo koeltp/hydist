@@ -24,3 +24,15 @@
 </section>
 ```
 第四步：神功大成  
+
+# Options
+## display
+type:`String`
+Default:`none`
+设置是否显示，默认是不显示的,它的值有`none`和`block`
+`none`：不显示
+`block`：显示
+
+## province
+type：`String`
+Default:北京市
