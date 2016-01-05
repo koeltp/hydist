@@ -15,7 +15,7 @@
 <script src="content/js/hydist.data.js"></script>  
 <script src="content/js/hydist.js"></script>
 ```
-请注意：hydist.data.js文件一定要hydist.js文件前  
+请注意：hydist.data.js文件一定要放在hydist.js文件前  
 第三步：创建以下Html  
 ```html
 <section id="dist-wrap" class="dist-wrap">  
