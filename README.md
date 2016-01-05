@@ -4,21 +4,30 @@
 # 效果
 地址：http://demo.hengyi.mobi/index.html
 
-# Quick start  
-第一步：引入样式文件  
-	`<link href="content/css/style.css" rel="stylesheet" />`  
+# Quick start
+第一步：引入样式文件
+```styles
+<link href="content/css/style.css" rel="stylesheet" />
+```
 第二步：引入scripts  
-	`<script src="content/lib/jquery-1.10.2.js"></script>  
-	<script src="content/js/hydist.data.js"></script>  
-	<script src="content/js/hydist.js"></script>`  
+```jvascripts
+<script src="content/lib/jquery-1.10.2.js"></script>  
+<script src="content/js/hydist.data.js"></script>  
+<script src="content/js/hydist.js"></script>
+```
 请注意：hydist.data.js文件一定要hydist.js文件前  
 第三步：创建以下Html  
-	`<section id="dist-wrap" class="dist-wrap">  
-		<ul id="target" class="dist-target"></ul>  
-		<ul id="source" class="dist-source"></ul>  
-	</section>`  
+```
+<section id="dist-wrap" class="dist-wrap">  
+    <ul id="target" class="dist-target"></ul>  
+	<ul id="source" class="dist-source"></ul>  
+</section>
+```
 第四步：神功大成  
-	`<section id="dist-wrapxx" class="dist-wrap">  
-		<ul id="targetxx" class="dist-target"></ul>  
-		<ul id="sourcexx" class="dist-source"></ul>  
-	</section>  `
+
+```html
+<section id="dist-wrapxx" class="dist-wrap">  
+	<ul id="targetxx" class="dist-target"></ul>  
+	<ul id="sourcexx" class="dist-source"></ul>  
+</section>
+```
