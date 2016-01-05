@@ -18,3 +18,7 @@
     <ul id="source" class="dist-source"></ul>
 </section>
 第四步：神功大成
+    <section id="dist-wrapxx" class="dist-wrap">
+        <ul id="targetxx" class="dist-target"></ul>
+        <ul id="sourcexx" class="dist-source"></ul>
+    </section>
