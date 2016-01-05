@@ -38,9 +38,24 @@ Method one
     city: "衡阳市",
     district: "衡南县"
 });
- ``` 
+ ```    
 
-# Options  
+# Options    
+## wrap   
+type:`String`   
+Default:`#dist-wrap`   
+包着源列表和目标列表，控制它们的显示   
+
+## target   
+type:`String`   
+Default:`#target`   
+目标列表，即选中的省市   
+
+## source   
+type:`String`   
+Default:`#source`   
+源列表，即提供选择的省市区(或县)   
+
 ## display  
 type:`String`  
 Default:`none`  
@@ -51,3 +66,8 @@ Default:`none`
 ## province  
 type：`String`  
 Default:北京市  
+
+## code   
+type:`Number`      
+Default:86   
+各省市区(县)的编号，默认值86即代表中国   
