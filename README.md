@@ -10,7 +10,7 @@
 第二步：引入scripts  
 	`<script src="content/lib/jquery-1.10.2.js"></script>  
 	<script src="content/js/hydist.data.js"></script>  
-	<script src="content/js/hydist.js"></script>  `
+	<script src="content/js/hydist.js"></script>`  
 请注意：hydist.data.js文件一定要hydist.js文件前  
 第三步：创建以下Html  
 	`<section id="dist-wrap" class="dist-wrap">  
