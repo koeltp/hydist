@@ -84,9 +84,9 @@
             $(this.options.source).append(source_htmls.join(' '));
         },
         setName: function (names) {
-            if (!names && names.length <= 0) return;
-
-            if ($(this.$element).is("input") == false && this.options.province) {
+            if (!!names==false || names.length <= 0) return;
+			console.log(names);
+            if ($(this.$element).is("input") == false) {
                 $(this.$element).text(names.join(' '));
                 return;
             }
