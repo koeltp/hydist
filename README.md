@@ -45,10 +45,10 @@ $("#method-three").hydist({
 	wrap: "#xx3",
     target: "#yy3",
     source: "#zz3",
-    },function(names){
+    getValue:function(names){
        	$("#test3").val(names.join(' '));
        	console.log($("#test3").val());
-    });
+    }    
 });
 ```   
 
@@ -86,7 +86,7 @@ Default:86
 各省市区(县)的编号，默认值86即代表中国   
 
 # Method  
-## callback(names)  
+## getValue(names)  
 #### names  
 type:`Array`  
 Default:[]

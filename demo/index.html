@@ -16,15 +16,15 @@
 </head>
 <body>
 	<div>
-		<h1>方式一：<h1>
+		<h4>方式一：</h4>
     	<div id="address">请选择地区</div><br/>
 	</div>
 	<div>
-		<h1>方式二：</h1>
+		<h4>方式二：</h4>
 		<input type="text" id="test2" value=" " />
 	</div>
 	<div>
-		<h1>方式三：</h1>
+		<h4>方式三：</h4>
 		<div id="method-three">请选择地区</div>
 		<input type="hidden" value="" id="test3" />
 	</div>
@@ -66,9 +66,10 @@
  				wrap: "#xx3",
                 target: "#yy3",
                 source: "#zz3",
-            },function(names){
-            	$("#test3").val(names.join(' '));
-            	console.log($("#test3").val());
+            	getValue:function(names){
+            		$("#test3").val(names.join(' '));
+            		console.log($("#test3").val());
+            	}
             });
         });
     </script>

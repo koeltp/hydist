@@ -18,7 +18,7 @@
     var EVENT_CLICK = "click." + NAMESPACE;
 
 
-    function Dist(element, options, cb) {
+    function Dist(element,options) {
         var DEFAULTS = {
             wrap: "#dist-wrap",
             target: "#target",
@@ -27,12 +27,11 @@
             province: "",
             city: "",
             district: "",
-            code: 86
+            code: 86,
+            getValue:function(){}
         };
-        this.callback = function () { };
-        if (typeof cb === "function") {
-            this.callback = cb;
-        }
+               
+
         this.$element = $(element);
         this.options = $.extend({}, DEFAULTS, $.isPlainObject(options) && options);
         this.init();
@@ -89,7 +88,7 @@
         setName: function (names) {
             if (!!names == false || names.length <= 0) return;
 
-            this.callback(names);
+            this.options.getValue(names);
 
             if ($(this.$element).is("input") == false) {
                 $(this.$element).text(names.join(' '));
@@ -150,9 +149,9 @@
     };
 
     $.fn.extend({
-        "hydist": function (options) {
+        "hydist": function (options, cb) {
             return this.each(function () {
-                new Dist($(this), options);
+                new Dist($(this), options, cb);
             });
         }
     });
