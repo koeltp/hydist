@@ -7,10 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>地区三级联动Demo - 横溢科技</title>
     <link href="content/css/style.css" rel="stylesheet" />
+    <style type="text/css">
+    ul{
+    	padding: 0px;
+    	margin: 0px;
+    }
+    </style>
 </head>
 <body>
-    <div id="address">请选择地区</div><br/>
-    <input type="text" id="test2" value=" " />
+	<div>
+		<h1>方式一：<h1>
+    	<div id="address">请选择地区</div><br/>
+	</div>
+	<div>
+		<h1>方式二：</h1>
+		<input type="text" id="test2" value=" " />
+	</div>
+	<div>
+		<h1>方式三：</h1>
+		<div id="method-three">请选择地区</div>
+		<input type="hidden" value="" id="test3" />
+	</div>
+
 
     <section id="dist-wrap" class="dist-wrap">
         <ul id="target" class="dist-target"></ul>
@@ -22,7 +40,10 @@
         <ul id="zz" class="dist-source"></ul>
     </section>
 
-
+	<section id="xx3" class="dist-wrap">
+        <ul id="yy3" class="dist-target"></ul>
+        <ul id="zz3" class="dist-source"></ul>
+    </section>
 
     <script src="content/lib/jquery-1.10.2.js"></script>
     <script src="content/js/hydist.data.js"></script>
@@ -39,6 +60,15 @@
                 province: "湖南省",
                 city: "衡阳市",
                 district: "衡南县"
+            });
+
+            $("#method-three").hydist({
+ 				wrap: "#xx3",
+                target: "#yy3",
+                source: "#zz3",
+            },function(names){
+            	$("#test3").val(names.join(' '));
+            	console.log($("#test3").val());
             });
         });
     </script>

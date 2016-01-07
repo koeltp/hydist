@@ -18,7 +18,7 @@
     var EVENT_CLICK = "click." + NAMESPACE;
 
 
-    function Dist(element, options) {
+    function Dist(element, options, cb) {
         var DEFAULTS = {
             wrap: "#dist-wrap",
             target: "#target",
@@ -28,6 +28,10 @@
             city: "",
             district: "",
             code: 86
+        };
+        this.callback = function () { };
+        if (typeof cb === "function") {
+            this.callback = cb;
         }
         this.$element = $(element);
         this.options = $.extend({}, DEFAULTS, $.isPlainObject(options) && options);
@@ -50,9 +54,8 @@
             $(_this.options.source).on(EVENT_CLICK, "li", function () {
                 _this.sourceClick(this);
             });
-            console.log($(_this.$element));
-            $(_this.$element).click(function () {
 
+            $(_this.$element).click(function () {
                 $(_this.options.wrap).show();
             });
         },
@@ -84,8 +87,10 @@
             $(this.options.source).append(source_htmls.join(' '));
         },
         setName: function (names) {
-            if (!!names==false || names.length <= 0) return;
-            console.log(names);
+            if (!!names == false || names.length <= 0) return;
+
+            this.callback(names);
+
             if ($(this.$element).is("input") == false) {
                 $(this.$element).text(names.join(' '));
                 return;

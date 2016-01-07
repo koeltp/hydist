@@ -1,32 +1,31 @@
-  .dist-wrap {
-            position: fixed;
-            top: 0px;
-            left: 0px;
-            width: 100%;
-            height: 100%;
-            display: none;
-        }
-ul{
-    padding: 0px;
-    margin: 0px;
+.dist-wrap {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    display: none;
+    z-index: 1000000;
+    overflow-y: scroll;
 }
-            .dist-wrap ul li {
-                font-size: 0.768rem;
-                height: 2.304rem;
-                padding: 0 0.25rem;
-                line-height: 2.304rem;
-                border-bottom: 1px solid #ddd;
-                list-style-type: none;
-            }
 
-            .dist-wrap ul.dist-target li:first-child {
-                background-color: #bbb;
-            }
+    .dist-wrap ul li {
+        font-size: 0.768rem;
+        height: 2.304rem;
+        padding: 0 0.25rem;
+        line-height: 2.304rem;
+        border-bottom: 1px solid #ddd;
+        list-style-type: none;
+    }
 
-            .dist-wrap ul.dist-target li:nth-child(2) {
-                background-color: #ccc;
-            }
+    .dist-wrap ul.dist-target li:first-child {
+        background-color: #bbb;
+    }
 
-            .dist-wrap ul.dist-source li {
-                background-color: #eee;
-            }
+    .dist-wrap ul.dist-target li:nth-child(2) {
+        background-color: #ccc;
+    }
+
+    .dist-wrap ul.dist-source li {
+        background-color: #eee;
+    }

@@ -39,6 +39,18 @@ Method one
     district: "衡南县"
 });
  ```    
+```html   
+$("#method-three").hydist({
+	wrap: "#xx3",
+    target: "#yy3",
+    source: "#zz3",
+    },function(names){
+       	$("#test3").val(names.join(' '));
+       	console.log($("#test3").val());
+    });
+});
+```   
+
 
 # Options    
 ## wrap   
@@ -71,3 +83,11 @@ Default:北京市
 type:`Number`      
 Default:86   
 各省市区(县)的编号，默认值86即代表中国   
+
+# Method  
+## callback(names)  
+#### names  
+type:`Array`  
+Default:[]
+
+为了方便把选择的地区名称赋给其它的，特添加了此方法，names数组是即选中的省、市、区(县)的名称。
