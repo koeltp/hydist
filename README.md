@@ -39,6 +39,7 @@ Method one
     district: "衡南县"
 });
  ```    
+ Method three   
 ```html   
 $("#method-three").hydist({
 	wrap: "#xx3",
