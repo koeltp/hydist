@@ -1,7 +1,7 @@
 /*!
  * hydist v0.1
  *
- * Copyright (c) 2016 横溢科技
+ * Copyright (c) 2016 koeltp
  * Released under the MIT license
  *
  * Date: 2015-01-05
